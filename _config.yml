@@ -20,8 +20,8 @@ texture:
   showNav: true
   showPicker: false
   navigation:
-    - title: My Work
-      url: "/my-work"
+    - title: Back to Home
+      url: "/#"
     - title: Resume
       url: "/resume"
 
