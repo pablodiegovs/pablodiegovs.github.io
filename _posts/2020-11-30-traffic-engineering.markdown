@@ -8,14 +8,7 @@ categories: Javascript NodeJS
 ¿Evitar la congestión? ¡Sí, es necesario! ¿Pero a qué precio?
 
 ```javascript
-const express = require('express')
-const app = express()
- 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
- 
-app.listen(3000)
+
 ```
 
 En las redes de comunicación de los proveedores de servicio es un aspecto sobresaliente, por no decir el más importante, ofrecer la disponibilidad de sus servicios las 24 horas durante todos los días del año. Por este motivo, poseer políticas y protocolos de acción frente a fallas que puedan presentarse en su medio ambiente es un requisito indispensable para brindar un alto nivel de calidad en sus servicios a los usuarios; ya sea telefonía, internet, televisión, data center, cloud, u otros. 
@@ -34,11 +27,5 @@ Frente a la necesidad de una respuesta más ágil al constante crecimiento de la
 
 
 ```scss
-body {
-	font-family: 'Nunito Sans', sans-serif;
-	line-height: 1.5em;
-	margin: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+
 ```
