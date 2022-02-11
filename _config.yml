@@ -23,7 +23,7 @@ texture:
     - title: Back to Home
       url: "/#"
     - title: Resume
-      url: "https://github.com/pablodiegovs/resume"
+      url: "/resume/"
 
   # generate social links in footer
   social_links:
