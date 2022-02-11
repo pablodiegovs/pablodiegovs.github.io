@@ -23,13 +23,12 @@ texture:
     - title: Back to Home
       url: "/#"
     - title: Resume
-      url: "/resume"
+      url: "https://github.com/pablodiegovs/resume"
 
   # generate social links in footer
   social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
+    github:  https://github.com/pablodiegovs
+    linkedIn: https://www.linkedin.com/in/pablo-diego-vs/
     rss: rss
  
 
