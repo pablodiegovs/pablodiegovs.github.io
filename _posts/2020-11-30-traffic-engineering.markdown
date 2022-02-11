@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "Traffic Engineering on SP Networks"
-description: Traffic engineering and its impact on the network.
+title:  "Network Congestion"
+description: Network Congestion and its impact on the network.
 date:   2021-11-10 21:03:36 +0530
-categories: Javascript NodeJS
 ---
 ¿Evitar la congestión? ¡Sí, es necesario! ¿Pero a qué precio?
 
