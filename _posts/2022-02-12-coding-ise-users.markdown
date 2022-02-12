@@ -5,11 +5,9 @@ description: Script en Python para habilitar usuarios masivos con fechas de expi
 date:   2022-02-12 21:03:36 +0530
 categories: Python3 API ISE
 ---
-Script en Python para habilitar usuarios masivos con fechas de expiración utilizando las API de Cisco ISE.
+Con el propósito de optimizar los tiempos operativos, un problema habitual en la administracion de un AD sobre un Cisco ISE es la cantidad de solicitudes día a día de habilitación de usuarios con fechas límite de expiración, este proceso de configuración a través de la interfaz web (GUI) de un ISE es algo morosa y la configuración es uno a uno. Por lo tanto, el script trata de optimizar un poco el proceso habilitando con fechas de expiración grupos de usuarios.
 
 ![texture theme preview](https://github.com/pablodiegovs/pablodiegovs.github.io/raw/main/assets/images/ISE-Phyton.jpg)
-
-Con el propósito de optimizar los tiempos operativos, un problema habitual en la administracion de un AD sobre un Cisco ISE es la cantidad de solicitudes día a día de habilitación de usuarios con fechas límite de expiración, este proceso de configuración a través de la interfaz web (GUI) de un ISE es algo morosa y la configuración es uno a uno. Por lo tanto, el script trata de optimizar un poco el proceso habilitando con fechas de expiración grupos de usuarios.
 
 Es importante que previo al despliegue de los scripts, validar la versión de Cisco ISE a utilizar y las APIs soportadas en el mismo. El Cisco ISE en general nos presenta dos APIs disponibles: ERS APIs y OPEN APIs. Más información del mismo les dejo el link de la página de [Developer-Cisco][dev-cisco]
 
