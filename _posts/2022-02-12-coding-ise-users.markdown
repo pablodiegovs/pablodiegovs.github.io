@@ -12,7 +12,7 @@ Es importante que previo al despliegue de los scripts, validar la versión de Ci
 
 Utilizaremos las siguientes librerías, "request" para ejecutar las funciones Rest, "json" para especificar el tipo de formato de datos utilizado en la comunicación con la API del ISE, y "getpass" para ocultar los caracteres del password al momento de ingresar los credenciales.
 
-```python3
+```javascript
 
 import requests
 import json
@@ -21,7 +21,7 @@ import getpass
 
 Solicitaremos las credenciales, para utilizar un autenticación de tipo BasicAuth para tener acceso a la APIs del Cisco ISE. El usuario por utilizar debe tener permisos de administración asociados al grupo ERS API que utilizamos en el ejemplo.
 
-```python3
+```javascript
 
 login=input("Ingrese su usuario login de administracion: ")
 pswd=getpass.getpass(prompt="Ingrese su password: ")
@@ -30,7 +30,7 @@ basicauth=(login,pswd)
 
 La primera funcion a utilizar nos valida el estado de un usuario en específico y el tiempo permitido de uso. 
 
-```python3
+```javascript
 
 def user_state(user):
     url = "https://<ise-ipaddress>:<port>/ers/config/internaluser/name/{}".format(user)
@@ -51,7 +51,7 @@ def user_state(user):
 
 La segunda funcion obtenemos el o los grupos de permisos de autorización donde se encuentra habilitado un usuario en específico.
 
-```python3
+```javascript
 def get_uig(user):
   url = "https://<ise-ipaddress>:<port>/ers/config/internaluser/name/{}".format(user)
   payload={}
@@ -66,7 +66,7 @@ def get_uig(user):
 
 Posteriormente, especificamos una función para habilitar con fechas de expiración un usuario en específico, la función tendrá de parámetros: el usuario, la fecha de expiración y el/los user-groups asociados al usuario en específico. Todo esto enviaremos a través de una función PUT hacia la API del ISE.
 
-```python3
+```javascript
 def enable_user(user,date,uig):
     url = "https://<ise-ipaddress>:<port>/ers/config/internaluser/name/{}".format(user)
     payload="{\n    \"InternalUser\": {\n        \"enabled\": true,\n        \"expiryDateEnabled\": true,\n        \"expiryDate\": \"%s\",\n        \"identityGroups\": \"%s\",\n        \"link\": {\n            \"rel\": \"self\",\n            \"href\": \"https://<ise-ipaddress>:<port>/ers/config/internaluser/name/%s\",\n            \"type\": \"application/json\"\n        }\n    }\n}" % (date, uig, user)
@@ -81,7 +81,7 @@ def enable_user(user,date,uig):
 
 Utilizamos en este caso un archivo de texto con la lista de usuarios por modificar "usuarios.txt", que enviaremos esos datos a una lista para una mejor manipulación.
 
-```python3
+```javascript
 users=[]
 file=open('usuarios.txt','r')
 for item in file:
@@ -92,7 +92,7 @@ file.close()
 
 Inicialmente, procedemos a validar el estado actual de los usuarios en la lista utilizando la función "user_state".
 
-```python3
+```javascript
 print("\nEstado actual de los siguientes usuarios: ", users)
 print("\n")
 for user in users:
@@ -101,7 +101,7 @@ for user in users:
 
 Por último, si no existen inconvenientes procedemos a habilitar los usuarios de la lista utilizando la función "enable_user".
 
-```python3
+```javascript
 counter=0
 user_error=""
 print("Los siguientes usuarios se habilitaran: ", users)
