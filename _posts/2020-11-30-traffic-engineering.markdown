@@ -6,9 +6,7 @@ date:   2021-11-10 21:03:36 +0530
 ---
 ¿Evitar la congestión? ¡Sí, es necesario! ¿Pero a qué precio?
 
-```javascript
-
-```
+![texture theme preview](https://github.com/pablodiegovs/pablodiegovs.github.io/raw/main/assets/images/Congestion.jpg)
 
 En las redes de comunicación de los proveedores de servicio es un aspecto sobresaliente, por no decir el más importante, ofrecer la disponibilidad de sus servicios las 24 horas durante todos los días del año. Por este motivo, poseer políticas y protocolos de acción frente a fallas que puedan presentarse en su medio ambiente es un requisito indispensable para brindar un alto nivel de calidad en sus servicios a los usuarios; ya sea telefonía, internet, televisión, data center, cloud, u otros. 
 
