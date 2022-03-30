@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Parsing outputs: OSPF neighbors text to json dictionary"
+title:  "OSPF neighbors table to json dictionary"
 description: Transform "show ip ospf neighbor" Cisco command to json dictionary for parsing output
 date:   2022-03-30 16:37:36
 categories: Python3 Netmiko TextFSM
 ---
 We'll deploy python script using netmiko and textFSM libraries for convert the show command output to json dictionary, for parsing purpose.
 
-![texture theme preview](https://github.com/pablodiegovs/pablodiegovs.github.io/blob/main/assets/images/OSPF-Netmiko-TextFSM.jpg)
+![texture theme preview](https://github.com/pablodiegovs/pablodiegovs.github.io/raw/main/assets/images/OSPF-Netmiko-TextFSM.jpg)
 
 Here's the link information that I used for build the following script shown in this github page. [python-neteng][python-neteng]
 
