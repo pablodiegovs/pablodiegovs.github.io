@@ -11,7 +11,7 @@ We'll deploy python script using netmiko and textFSM libraries for convert the s
 
 Here's the link information that I used for build the following script shown in this github page. [python-neteng][python-neteng]
 
-The scenario consist on extract OSPF Neighbor table from R1 that have four OSPF neighbors, the 'show ip ospf neighbor' shown like that:
+The scenario consist on extract OSPF Neighbor table from R1 that have four OSPF neighbors, the 'show ip ospf neighbor' displayed below:
 
 
 ```javascript
@@ -25,7 +25,7 @@ Neighbor ID     Pri   State           Dead Time   Address         Interface
 50.50.50.50      0   FULL/  -        00:00:33    172.16.26.19  GigabitEthernet1/6
 ```
 
-The library textFSM was developed by Google output parsing, and for correct use it's necessary create a template file specifying parameters and variables for read into output router command. Bellow it's a template used for OSPF neighbor parsing and saved as template/show_ospf.template
+The library textFSM was developed by Google for output text parsing, and for correct use it's necessary create a template file specifying parameters and variables for analyze output router command. Underneath it's a template used for OSPF neighbor parsing and saved as template/show_ospf.template
 
 ```javascript
 
@@ -40,9 +40,9 @@ Start
  ^${NeighborID}\s+${Pri}\s+${State}\s+${DeadTime}\s+${Add}+\s+${Interface} -> Record
 ```
 
-The first part shown on the text above is the variable part, where we declare on by one all variables displayed on 'show ip ospf nei" output. The second part is about structure for the statement of each OSPF neighbor. For more information you can visit: [python-neteng][python-neteng]
+The first part shown on the text above is the variable part, where we declare one by one all variables displayed on 'show ip ospf nei" output. The second part is about structure for the statement of each OSPF neighbor. For more information you can visit: [python-neteng][python-neteng]
 
-Install for use the following libraries (this post doesn't include the procedure for install python libraries, you'd use pip install 'library-name' command) :
+Install the following libraries (this post doesn't include the procedure for install python libraries, you'd use pip install 'library-name' command):
 
 ```javascript
 
@@ -87,7 +87,7 @@ template.close
 print (result)
 ```
 
-the OSPF neighbor JSON file will look like: 
+the OSPF neighbor JSON file will look like this: 
 
 ```javascript
 [
