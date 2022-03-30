@@ -9,7 +9,7 @@ We'll deploy python script using netmiko and textFSM libraries for convert the s
 
 ![texture theme preview](https://github.com/pablodiegovs/pablodiegovs.github.io/blob/main/assets/images/OSPF-Netmiko-TextFSM.jpg)
 
-Leave here base link information that I used for build the following script shown in this github page. [python-neteng][python-neteng]
+Here's the link information that I used for build the following script shown in this github page. [python-neteng][python-neteng]
 
 The scenario consist on extract OSPF Neighbor table from R1 that have four OSPF neighbors, the 'show ip ospf neighbor' shown like that:
 
