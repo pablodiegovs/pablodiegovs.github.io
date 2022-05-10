@@ -38,7 +38,7 @@ devices:
     os: huawei_vrp
 ```
 
-On the python script it's necessary import the followeing libraries, including napalm packages:
+On the python script it's necessary to import the following libraries, including napalm packages:
 
 ```javascript
 import napalm
@@ -57,7 +57,7 @@ def main():
     pasw = getpass.getpass(prompt="Password: ")
     print("#"*100 + "\n")
     
-    ### Select area o section to deploy script, in these case we're going to select TEST
+    ### Select area o section to deploy script, in these case we are going to select TEST
     section = input("Select one department (IT/Financial/TEST): ")
     print("#"*100 + "\n")
     
