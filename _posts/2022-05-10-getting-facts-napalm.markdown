@@ -33,7 +33,7 @@ devices:
   Huawei-VRP-Device-01:
     connections:
       cli:
-        ip: 172.16.30.30
+        ip: 10.10.10.3
         protocol: ssh -o KexAlgorithms=diffie-hellman-group14-sha1
     os: huawei_vrp
 ```
