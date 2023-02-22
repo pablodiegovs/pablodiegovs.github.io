@@ -55,7 +55,7 @@ El principio SOLID para el diseño de programación orientada a objetos es la ab
 
 1. SRP: se basa en el principio de que una clase debería tener una única responsabilidad o trabajo, Si un módulo tiene multiples funciones , modificar una de ellas afectaría a las otras y afectaría al sistema en general. Un error común sería incluir un método en la clase, que su modificación afecte a toda la clase en si, siguiendo un ejemplo de la guía:
 
-```javascript
+```python
 #not-easy-to-maintain-code:
  class Switch:
 	def __init__(self, hostname, vendor):
@@ -73,7 +73,7 @@ El principio SOLID para el diseño de programación orientada a objetos es la ab
 
 Como se observa en el ejemplo anterior, el método "deploy_switch" tiene funciones adicionales que cualquier modificación afectaría a toda la clase en general, por lo tanto como best-practice y siguiendo la directriz de SRP, asignamos el servicio "deploy_switch" a otra clase, asi mantenemos una única responsabilidad a toda la class que es la de hacer un setting de parámetros.
 
-```javascript
+```python
  class Switch:
 	def __init__(self, hostname, vendor):
 		self.hostname = hostname
@@ -92,7 +92,7 @@ class SwitchDeployer:
 2. OCP: indica que todos los componentes (class, modules, functions) deberían admitir extensión pero no modificación. Existinsibilidad se conceptualiza como la capacidad de permitir a un sistema o aplicación de extender sus features sin modificaciones.
 Uno de las características que nos brinda la programación orientada a objetos es la de "Herencia". Donde una clase hija se relaciona heredando características de la clase padre. En el ejemplo tenemos una clase objeto "Switch" (clase padre), que engloba todos los switch devices de nuestra red. Si necesito distinguir un switch de acceso, de un switch de agregación, y asignar diferentes rangos de IPs de gestión dependiendo de la funcionalidad de cada switch, entonces tendría que modificar mi clase Switch, adicionar una condicionante que dependiendo su función jerarquica asignar cierto rango de IP. Esto viola el principio OCP del que estamos hablando, porque si bien estamos extendiendo funcionalidades, estamos modificando la clase en si. Para implementar en nuestro script esta funcionalidad sin violar el OCP, podemos utilizar herencia de la POO:
 
-```javascript
+```python
 #parent class
  class Switch:
 	def __init__(self, hostname, vendor):
@@ -117,7 +117,7 @@ En el ejemplo anterior se observa que un futuro si queremos agregar un objeto co
 
 4. ISP: el principio recomienda no tener interfaces junto a otras interfaces no utilizadas en la misma superclase. Por ejemplo una utilización errónea sería la siguiente:
 
-```javascript
+```python
  class SwitchAgg(Switch):    
 	def get_model(self):
 		return self.get_model()
@@ -133,7 +133,7 @@ En el ejemplo anterior se observa que un futuro si queremos agregar un objeto co
 ```
 Ejemplo respetando el principio de interface segregation:
 
-```javascript
+```python
 class Switch:    
 	def get_model(self):
 		return self.get_model()
