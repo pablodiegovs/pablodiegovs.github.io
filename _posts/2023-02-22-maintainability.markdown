@@ -9,7 +9,6 @@ En mi proceso de estudio de DevNet, una de las consideraciones más importantes 
 
 ![texture theme preview](https://github.com/pablodiegovs/pablodiegovs.github.io/raw/main/assets/images/mantenibilidad.jpg)
 
-La modularidad es otro atributo de calidad o requerimiento no funcional, que consiste en separar una arquitectura en pequeños bloques de código con funciones e interacciones claras entre módulos.
 
 Desde la perspectiva de networking, podría yo relacionar conceptos de mantenibilidad y modularidad, a procesos de segmentación y microsegmentación para poder hacer más llevadera la gestión de una infraestructura de red y aislar posibles fallas que surjan en sectores sin necesidad que afecte al funcionamiento de otros sectores (principio básico de segmentación en diseño de redes).
 
